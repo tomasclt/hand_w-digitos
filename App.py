@@ -56,7 +56,8 @@ if st.button('Predict Now'):
         st.header('Please draw a digit on the canvas.')
 
 # Add sidebar
-st.sidebar.title("About")
-st.sidebar.text("Created by Vinay Uniyal")
-st.sidebar.text("GitHub Repository")
-st.sidebar.write("[GitHub Repo Link](https://github.com/Vinay2022/Handwritten-Digit-Recognition)")
+st.sidebar.title("Acerca de ")
+st.write("En esta aplicación se evalua la capacidad de un RNA de reconocer digitos escritos a mano.")
+st.sidebar.text("Basado en desarrollo de Vinay Uniyal")
+#st.sidebar.text("GitHub Repository")
+#st.sidebar.write("[GitHub Repo Link](https://github.com/Vinay2022/Handwritten-Digit-Recognition)")
