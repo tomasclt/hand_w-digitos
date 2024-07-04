@@ -21,14 +21,14 @@ def predictDigit(image):
     return result
 
 # Streamlit 
-st.set_page_config(page_title='Reconocimiento de Digitos escritos a mano', layout='wide')
-st.title('Reconocimiento de Digitos escritos a mano')
+st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layout='wide')
+st.title('Reconocimiento de Dígitos escritos a mano')
 st.subheader("Dibuja el digito en el panel  y presiona  'Predecir'")
 
 # Add canvas component
 # Specify canvas parameters in application
 drawing_mode = "freedraw"
-stroke_width = st.slider('Select Stroke Width', 1, 30, 15)
+stroke_width = st.slider('Selecciona el ancho de línea', 1, 30, 15)
 stroke_color = '#FFFFFF' # Set background color to white
 bg_color = '#000000'
 
@@ -51,7 +51,7 @@ if st.button('Predecir'):
         input_image.save('prediction/img.png')
         img = Image.open("prediction/img.png")
         res = predictDigit(img)
-        st.header('Predicted Digit: ' + str(res))
+        st.header('El Digito es : ' + str(res))
     else:
         st.header('Por favor dibuja en el canvas el digito.')
 
