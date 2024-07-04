@@ -21,9 +21,9 @@ def predictDigit(image):
     return result
 
 # Streamlit 
-st.set_page_config(page_title='Handwritten Digit Recognition', layout='wide')
-st.title('Handwritten Digit Recognition')
-st.subheader("Draw the digit on canvas and click on 'Predict Now'")
+st.set_page_config(page_title='Reconocimiento de Digitos escritos a mano', layout='wide')
+st.title('Reconocimiento de Digitos escritos a mano')
+st.subheader("Dibuja el digito en el panel  y presiona  'Predecir'")
 
 # Add canvas component
 # Specify canvas parameters in application
@@ -44,7 +44,7 @@ canvas_result = st_canvas(
 )
 
 # Add "Predict Now" button
-if st.button('Predict Now'):
+if st.button('Predecir'):
     if canvas_result.image_data is not None:
         input_numpy_array = np.array(canvas_result.image_data)
         input_image = Image.fromarray(input_numpy_array.astype('uint8'),'RGBA')
@@ -53,11 +53,13 @@ if st.button('Predict Now'):
         res = predictDigit(img)
         st.header('Predicted Digit: ' + str(res))
     else:
-        st.header('Please draw a digit on the canvas.')
+        st.header('Por favor dibuja en el canvas el digito.')
 
 # Add sidebar
-st.sidebar.title("Acerca de ")
-st.sidebar.text("En esta aplicación se evalua la capacidad de un RNA de reconocer digitos escritos a mano.")
+st.sidebar.title("Acerca de:")
+st.sidebar.text("En esta aplicación se evalua ")
+st.sidebar.text("la capacidad de un RNA de reconocer") 
+st.sidebar.text("digitos escritos a mano.")
 st.sidebar.text("Basado en desarrollo de Vinay Uniyal")
 #st.sidebar.text("GitHub Repository")
 #st.sidebar.write("[GitHub Repo Link](https://github.com/Vinay2022/Handwritten-Digit-Recognition)")
