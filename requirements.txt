@@ -2,4 +2,4 @@ streamlit
 tensorflow 
 matplotlib 
 streamlit-drawable-canvas 
-python_version == 3.9
+
