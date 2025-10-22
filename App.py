@@ -1,4 +1,4 @@
-with st.sidebar:
+
     st.markdown("""
     <div class="sidecard">
       <h3>ℹ️ Acerca de</h3>
@@ -16,3 +16,4 @@ with st.sidebar:
       </ul>
     </div>
     """, unsafe_allow_html=True)
+
